@@ -1,0 +1,39 @@
+backend:
+name: git-gateway
+branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+- name: "products"
+label: "公開產品"
+folder: "data"
+create: true
+slug: "products"
+fields:
+- { label: "貨號", name: "sku", widget: "string" }
+- { label: "產品名稱", name: "name", widget: "string" }
+- { label: "分類", name: "category", widget: "string" }
+- { label: "圖片", name: "image", widget: "image" }
+- { label: "日期", name: "date", widget: "date" }
+
+- name: "brand"
+label: "品牌專區"
+folder: "data"
+create: true
+slug: "brand"
+fields:
+- { label: "貨號", name: "sku", widget: "string" }
+- { label: "產品名稱", name: "name", widget: "string" }
+- { label: "圖片", name: "image", widget: "image" }
+- { label: "日期", name: "date", widget: "date" }
+
+- name: "settings"
+label: "公司介紹"
+files:
+- name: "about"
+label: "關於我們"
+file: "data/about.md"
+fields:
+- { label: "內容", name: "body", widget: "markdown" }
